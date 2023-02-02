@@ -1,11 +1,21 @@
-let kontakt= document.getElementById("kontakt");
+//modal
+let modal: any = document.getElementById("myModal");
+let btn: any = document.getElementById("cvButton");
+let closeBtn: any = document.getElementById("closeButton");
 
-let x: number = 0;
+//öppna modal
+btn.onclick = function () {
+  modal.style.display = "block";
+};
 
-/*function kontaktalert(){
-    kontakt?.addEventListener("click", function(){
-        alert("Du klickade på kontakt!");
-    })
-}
+//stängningskryss för modal
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+};
 
-kontaktalert(); */
+//funktionalitet för att kunna trycka utanför för att stänga
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
