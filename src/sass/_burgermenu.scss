@@ -1,0 +1,48 @@
+@use "mixins";
+
+#burgerBtn{
+    color: white;
+    background-color: black;
+    border: none;
+    margin-left: 3%;
+    cursor: pointer;
+    @include mixins.desktop{
+        display: none;
+    }
+}
+
+.burgerLinks{
+    margin: 0;
+    a{
+        color: black;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+    #cvButton{
+        padding: 20px;
+        padding-right: 55%;
+    }
+    #cvButton:hover{
+        background-color: lightgray;
+        color: black;
+    }
+}
+
+a:hover{
+    background-color: lightgray;
+    @include mixins.desktop{
+        background-color: black;
+    }
+}
+
+.burger-modal-content{
+    background-color: #fefefe;
+    margin: 5% auto;
+    //padding: 20px;
+    position: absolute;
+    left: 15;
+    top: 65;
+    border: 2px solid black;
+    width: 25%;
+}

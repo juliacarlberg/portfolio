@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Julias Portfolio</title>
+    <title>Julia Carlberg - Portfolio</title>
     <link rel="stylesheet" href="sass/main.scss" />
     <script defer src="ts/main.ts"></script>
     <script
@@ -19,49 +19,211 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Bebas Neue:300,400,700"
+    />
   </head>
   <body>
     <header>
-      <h1>Julia Carlberg</h1>
+      <button id="burgerBtn"><i class="fa-solid fa-bars"></i></button>
+      <a id="logoLink" href="index.html"
+        ><img
+          id="logga"
+          src="./assets/jclogga.png"
+          alt="Typograffi Julia Carlberg"
+      /></a>
       <p class="links">
-        <a id="kontakt" href="">Kontakt</a>
-        <a href="">Om mig</a>
+        <a href="#aboutmelink">Om mig</a>
+        <a id="kontakt" href="#contactlink">Kontakt</a>
+        <a href="#projectslink">Projekt</a>
         <button id="cvButton">CV</button>
       </p>
+      <div id="myBurgerModal" class="modal">
+        <div class="burger-modal-content">
+          <p class="burgerLinks">
+            <a href="#aboutmelink">Om mig</a>
+            <a id="kontakt" href="#contactlink">Kontakt</a>
+            <a href="#projectslink">Projekt</a>
+            <button id="cvButton">CV</button>
+          </p>
+        </div>
+      </div>
     </header>
-
     <div id="container">
       <div class="presentation">
         <article>
-          <h2>Julia Carlberg</h2>
-          <img id="juliaai" src="./assets/juliaai.pdf" alt="Illustration">
-          <p>Frontend-utvecklare</p>
-          <i class="fa-brands fa-html5"></i>
+          <h2 id="demo"></h2>
+          <h2 id="typeMe"></h2>
+          <!-- <i class="fa-brands fa-html5"></i>
           <i class="fa-brands fa-sass"></i>
           <i class="fa-brands fa-square-js"></i>
           <i class="fa-brands fa-node"></i>
-          <i class="fa-brands fa-react"></i>
+          <i class="fa-brands fa-react"></i> -->
         </article>
+      </div>
+      <h2 id="aboutmelink" class="titleh2">Om mig</h2>
+      <div id="aboutme">
+        <img
+          id="juliabw"
+          src="./assets/cvbildbw.jpg"
+          alt="Svartvit bild på Julia"
+        />
+        <article>
+          <h3 class="bluetext">Hej!</h3>
+          <p>
+            Jag studerar just nu till Frontend-utvecklare på Medieinstitutet i
+            Stockholm. Där har vi kurser inom:
+          </p>
+          <ul id="ulcontainer">
+            <ul>
+              <li>HTML & CSS/SCSS</li>
+              <li>Javascript/Typescript</li>
+              <li>Node</li>
+              <li>Vue</li>
+            </ul>
+            <ul>
+              <li>React</li>
+              <li>UX</li>
+              <li>API-Utveckling</li>
+              <li>Agilt projektarbete</li>
+            </ul>
+          </ul>
+          <p>
+            Jag har alltid haft ett stort intresse för IT och älskar att vara
+            kreativ och jobba med problemlösning. Jag älskar att hela tiden
+            utmana mig själv och lära mig nya saker. Tror ni att jag skulle
+            passa in på eran arbetsplats så får ni jättegärna höra av er till
+            mig!
+          </p>
+          <p class="bluetext">
+            Jag söker LIA för perioden 2023-09-25 till och med 2023-12-03.
+          </p>
+        </article>
+      </div>
+      <h2 id="contactlink" class="titleh2">Kontakt</h2>
+      <div id="contact">
+        <h2>Kontakta mig</h2>
+        <p>Jag nås via:</p>
+        <p>
+          <a href="mailto:julia.carlberg@medieinstitutet.se">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a target="_blank" href="https://github.com/juliacarlberg"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/julia-carlberg-44866124b/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </p>
+      </div>
+      <h2 id="projectslink" class="titleh2">Projekt</h2>
+      <article id="projects">
+        <div class="project">
+          <div id="mobileProjectImages">
+            <img
+              class="myMobileSlides"
+              src="./assets/webbshopmobil.png"
+              alt="Skärmdump från webbshop-projekt"
+            />
+            <img
+              class="myMobileSlides"
+              src="./assets/webbshopmobil2.png"
+              alt="Skärmdump från webbshop-projekt"
+            />
+            <img
+              class="myMobileSlides"
+              src="./assets/webbshopmobil3.png"
+              alt="Skärmdump från webbshop-projekt"
+            />
+            <div>
+              <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+              <span id="dot4" class="w3-badge" onclick="currentDiv(1)"></span>
+              <span id="dot5" class="w3-badge" onclick="currentDiv(2)"></span>
+              <span id="dot6" class="w3-badge" onclick="currentDiv(3)"></span>
+              <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+            </div>
+          </div>
+          <div
+            id="desktopProjectImages"
+            class="w3-content w3-display-container"
+          >
+            <img
+              class="mySlides"
+              src="./assets/screenshotwebbshop.png"
+              alt="Skärmdump från webbshop-projekt"
+            />
+            <img
+              class="mySlides"
+              src="./assets/screenshot2webbshop.png"
+              alt="Skärmdump från webbshop-projekt"
+            />
+            <img
+              class="mySlides"
+              src="./assets/screenshot3webbshop.png"
+              alt="Skärmdump från webbshop-projekt"
+            />
+            <div id="dotsArrows">
+              <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+              <span id="dot" class="desktop-dot" onclick="currentDiv(1)"></span>
+              <span
+                id="dot2"
+                class="desktop-dot"
+                onclick="currentDiv(2)"
+              ></span>
+              <span
+                id="dot3"
+                class="desktop-dot"
+                onclick="currentDiv(3)"
+              ></span>
+              <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+            </div>
+          </div>
+          <span>
+            <h2>Webbshop - Grupparbete Medieinstitutet</h2>
+            <p>
+              I detta projekt har vi skapat en webbshop med hjälp av HTML,
+              Typescript och SCSS. Projektet har jag skapat tillsammans med
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/ida-lindgren-0b6099207/"
+                >Ida Lindgren</a
+              >
+              och
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/sanna-rossäng-3a2434102/"
+                >Sanna Rossäng</a
+              >. Vi har under projektets gång använt oss av den agila
+              projektmodellen och dokumenterat vårat arbete i Jira.
+            </p>
+          </span>
+        </div>
+      </article>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <button id="closeButton" class="close">&times;</button>
+        <img id="cvImage" src="../src/assets/cvjulia.pdf" alt="CV" />
       </div>
     </div>
     <footer>
       <h2>Hit me up!</h2>
-      <p><a href="mailto:julia.carlberg@medieinstitutet.se">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a target="_blank" href="https://github.com/juliacarlberg"
-        ><i class="fa-brands fa-github"></i
-      ></a>
-      <a
-        target="_blank"
-        href="https://www.linkedin.com/in/julia-carlberg-44866124b/"
-        ><i class="fa-brands fa-linkedin"></i
-      ></a></p>
+      <p>
+        <a href="mailto:julia.carlberg@medieinstitutet.se">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a target="_blank" href="https://github.com/juliacarlberg"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/julia-carlberg-44866124b/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </p>
     </footer>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <button id="closeButton" class="close">&times;</button>
-        <img id="cvImage" src="../src/assets/cvjulia.pdf" alt="CV">
-    </div>
   </body>
 </html>

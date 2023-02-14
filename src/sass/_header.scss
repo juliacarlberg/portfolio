@@ -1,0 +1,57 @@
+@use "mixins";
+
+#logga{
+    width: 150px;
+    display: flex;
+    margin-right: 5%;
+    @include mixins.desktop{
+        margin-left: 5%;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+
+    @include mixins.desktop{
+        color: white;
+    }
+
+    .links{
+        margin-top: 3%;
+        display: none;
+        margin-right: 1%;
+        a{
+            margin: 20px;
+        }
+
+        button{
+            margin: 20px;
+            font-family: "Lato";
+        }
+        @include mixins.desktop{
+            display: inline;
+        }
+    }
+}
+
+#logoLink:hover{
+    background-color: black;
+}
+
+#cvButton{
+    border: none;
+    cursor: pointer;
+    background-color: white;
+
+    @include mixins.desktop{
+        color: white;
+        background-color: black;
+    }
+}
+
+#cvButton:hover{
+    color: rgb(47, 0, 255);
+}
+
