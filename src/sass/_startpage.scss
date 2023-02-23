@@ -13,6 +13,19 @@ body{
     }
 }
 
+#startTyping{
+    width: 700px;
+
+    #demo{
+        color: rgba(47, 0, 255, 0.75);
+    }
+    
+    #jc{
+        color: white;
+        width: 100%;
+    }
+}
+
 .titleh2{
     font-family: "Bebas Neue";
     font-size: 30pt;
@@ -163,14 +176,10 @@ a:hover{
             padding: 5%;
             line-height: 30px;
             text-align: center;
-            width: 100%;
 
             h2{
                 font-size: 38pt;
             }
-        }
-        #demo{
-            color: white;
         }
     }
 

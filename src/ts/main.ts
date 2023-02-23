@@ -97,7 +97,7 @@ function showMobileDivs(n: number) {
 let i = 0;
 
 function typeWriter() {
-  let txt = "Julia Carlberg";
+  let txt = "<Frontend-utvecklare>";
   let speed = 80;
   if (i < txt.length) {
     (document.getElementById("demo") as HTMLElement).innerHTML += txt.charAt(i);
@@ -106,18 +106,4 @@ function typeWriter() {
   }
 }
 
-let index = 0;
-
-function typeWriter2() {
-  let text = "Frontend-utvecklare";
-  let speed = 80;
-  if (index < text.length) {
-    (document.getElementById("typeMe") as HTMLElement).innerHTML +=
-      text.charAt(index);
-    index++;
-    setTimeout(typeWriter2, speed);
-  }
-}
-
 typeWriter();
-typeWriter2();
