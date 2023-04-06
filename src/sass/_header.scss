@@ -22,9 +22,6 @@ header{
         margin-top: 3%;
         display: none;
         margin-right: 1%;
-        a{
-            margin: 20px;
-        }
 
         button{
             margin: 20px;
@@ -40,6 +37,20 @@ header{
     background-color: black;
 }
 
+.headerLink{
+    margin: 0;
+}
+
+.headerLinks:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.3);
+    transition: 0.5s;
+    @include mixins.desktop{
+        background-color: black;
+    }
+}
+
 #cvButton{
     border: none;
     cursor: pointer;
@@ -49,9 +60,5 @@ header{
         color: white;
         background-color: black;
     }
-}
-
-#cvButton:hover{
-    color: rgb(47, 0, 255);
 }
 

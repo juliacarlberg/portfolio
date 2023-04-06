@@ -34,14 +34,6 @@
     }
 }
 
-.headerLinks:hover{
-    background-color: black;
-    color: white;
-    @include mixins.desktop{
-        background-color: black;
-    }
-}
-
 .burger-modal-content{
     background-color: #fefefe;
     margin: 5% auto;
@@ -51,4 +43,9 @@
     top: 65;
     border: 2px solid black;
     width: 25%;
+}
+
+.burgerLink:hover{
+  background-color: black;
+  color: white;
 }
