@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="sass/main.scss" />
     <script defer src="ts/main.ts"></script>
     <script
+      defer
       src="https://kit.fontawesome.com/918165918f.js"
       crossorigin="anonymous"
     ></script>
@@ -25,7 +26,7 @@
     />
   </head>
   <body>
-    <header>
+    <header id="header">
       <button id="burgerBtn"><i class="fa-solid fa-bars"></i></button>
       <a id="logoLink" href="index.html"
         ><img
@@ -34,10 +35,10 @@
           alt="Typograffi Julia Carlberg"
       /></a>
       <p class="links">
-        <a href="#aboutmelink">Om mig</a>
-        <a id="kontakt" href="#contactlink">Kontakt</a>
-        <a href="#projectslink">Projekt</a>
-        <button id="cvButton">CV</button>
+        <a href="#aboutmelink" class="headerLinks">Om mig</a>
+        <a id="kontakt" href="#contactlink" class="headerLinks">Kontakt</a>
+        <a href="#projectslink" class="headerLinks">Projekt</a>
+        <button id="cvButton" class="headerLinks">CV</button>
       </p>
       <div id="myBurgerModal" class="modal">
         <div class="burger-modal-content">
@@ -53,23 +54,18 @@
     <div id="container">
       <div class="presentation">
         <article id="startTyping">
-          <h2 id="jc">Julia Carlberg</h2>
+          <a href="#aboutmelink"><h2 id="jc">Julia Carlberg</h2></a>
           <h2 id="demo"></h2>
-          <!-- <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-sass"></i>
-          <i class="fa-brands fa-square-js"></i>
-          <i class="fa-brands fa-node"></i>
-          <i class="fa-brands fa-react"></i> -->
         </article>
       </div>
       <h2 id="aboutmelink" class="titleh2">Om mig</h2>
       <div id="aboutme">
         <img
           id="juliabw"
-          src="./assets/cvbildbw.jpg"
+          src="./assets/cvbild.jpg"
           alt="Svartvit bild på Julia"
         />
-        <article>
+        <article id="aboutmearticle">
           <h3 class="bluetext">Hej!</h3>
           <p>
             Jag studerar just nu till Frontend-utvecklare på Medieinstitutet i
@@ -78,7 +74,8 @@
           <ul id="ulcontainer">
             <ul>
               <li>HTML & CSS/SCSS</li>
-              <li>Javascript/Typescript</li>
+              <li>Javascript</li>
+              <li>Typescript</li>
               <li>Node</li>
               <li>Vue</li>
             </ul>
@@ -119,64 +116,17 @@
       <h2 id="projectslink" class="titleh2">Projekt</h2>
       <article id="projects">
         <div class="project">
-          <div id="mobileProjectImages">
+          <div>
             <img
-              class="myMobileSlides"
-              src="./assets/webbshopmobil.png"
-              alt="Skärmdump från webbshop-projekt"
-            />
-            <img
-              class="myMobileSlides"
-              src="./assets/webbshopmobil2.png"
-              alt="Skärmdump från webbshop-projekt"
-            />
-            <img
-              class="myMobileSlides"
-              src="./assets/webbshopmobil3.png"
-              alt="Skärmdump från webbshop-projekt"
-            />
-            <div>
-              <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
-              <span id="dot4" class="w3-badge" onclick="currentDiv(1)"></span>
-              <span id="dot5" class="w3-badge" onclick="currentDiv(2)"></span>
-              <span id="dot6" class="w3-badge" onclick="currentDiv(3)"></span>
-              <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
-            </div>
-          </div>
-          <div
-            id="desktopProjectImages"
-            class="w3-content w3-display-container"
-          >
-            <img
-              class="mySlides"
-              src="./assets/screenshotwebbshop.png"
-              alt="Skärmdump från webbshop-projekt"
-            />
-            <img
-              class="mySlides"
-              src="./assets/screenshot2webbshop.png"
-              alt="Skärmdump från webbshop-projekt"
-            />
-            <img
-              class="mySlides"
               src="./assets/screenshot3webbshop.png"
-              alt="Skärmdump från webbshop-projekt"
+              alt="Skärmdump från webbshop"
+              class="projectImg"
             />
-            <div id="dotsArrows">
-              <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
-              <span id="dot" class="desktop-dot" onclick="currentDiv(1)"></span>
-              <span
-                id="dot2"
-                class="desktop-dot"
-                onclick="currentDiv(2)"
-              ></span>
-              <span
-                id="dot3"
-                class="desktop-dot"
-                onclick="currentDiv(3)"
-              ></span>
-              <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
-            </div>
+            <img
+              src="./assets/webbshopmobil2.png"
+              alt="Skärmdump från webbshop"
+              class="projectImgMobile"
+            />
           </div>
           <span>
             <h2>Webbshop - Grupparbete Medieinstitutet</h2>
@@ -198,12 +148,42 @@
             </p>
           </span>
         </div>
+        <div class="project">
+          <div>
+            <img
+              src="./assets/tododesktop.png"
+              alt="Skärmdump från to-do"
+              class="projectImg"
+            />
+            <img
+              src="./assets/todomobile.png"
+              alt="Skärmdump från to-do"
+              class="projectImgMobile"
+            />
+          </div>
+          <span>
+            <h2>To-do lista - Inlämningsuppgift Medieinstitutet</h2>
+            <p>
+              Detta är från en uppgift i kursen Javascript-grundkurs där vi fick
+              i uppgift att skapa en to-do lista där man ska kunna lägga till
+              nya to-dos och ta bort och kunna markera att dom är klara. Jag har
+              skapat den med Javascript, HTML och SCSS.
+            </p>
+          </span>
+        </div>
       </article>
+      <div id="arrowUp">
+        <a href="#header"><i class="fa-solid fa-circle-chevron-up"></i></a>
+      </div>
     </div>
     <div id="myModal" class="modal">
       <div class="modal-content">
         <button id="closeButton" class="close">&times;</button>
-        <img id="cvImage" src="../src/assets/cvjulia.pdf" alt="CV" />
+        <img
+          id="cvImage"
+          src="../src/assets/cvjuliacarlberg.medieinstitutet.pdf.pdf"
+          alt="CV"
+        />
       </div>
     </div>
     <footer>
